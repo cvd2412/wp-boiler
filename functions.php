@@ -1,8 +1,4 @@
 <?php
-
-add_filter("use_block_editor_for_post_type", "disable_gutenberg_editor");
-function disable_gutenberg_editor(){return false;}
-
 function cvding_wp_setup() {
     /*
     * Make theme available for translation.
@@ -37,9 +33,9 @@ add_action( 'init', 'scripts' );
 add_action('after_setup_theme', 'cvding_wp_setup');
 
 function cvding_enqueue_styles() {
-	wp_enqueue_style('main-style', get_template_directory_uri() . '/dist/main.css', '', '');
+	wp_enqueue_style('main-style', get_template_directory_uri() . '/assets/app.css', '', '');
 	wp_enqueue_style('main-styles', get_template_directory_uri() . '/style.css', '', '');
-	wp_enqueue_script('main-script', get_template_directory_uri() . '/dist/main.min.js', '', '', true);
+	wp_enqueue_script('main-script', get_template_directory_uri() . '/assets/app.js', '', '', true);
 }
 
 add_action('wp_enqueue_scripts', 'cvding_enqueue_styles');
@@ -73,8 +69,6 @@ function resImg($imgID, $size = 'full', $customClass = ''){
 //add_image_size( 'retina', 2880, 9999 );
 //add_image_size( 'hd', 1920, 9999 );
 //add_image_size( 'content', 1440, 9999 );
-
-require_once(__DIR__ . '/includes/acf.php');
 
 function create_gf_cpt() {
 	$args = array(

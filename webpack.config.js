@@ -23,10 +23,10 @@ module.exports = {
             dependOn: 'shared',
         },
 
-        // Pages
+        // custom
         /*
-        product: {
-            import: path.join(__dirname, 'resources/js/pages/product.js'),
+        custom: {
+            import: path.join(__dirname, 'resources/js/my-path'),
             dependOn: 'app',
         },*/
 

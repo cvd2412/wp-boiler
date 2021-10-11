@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Page template rwar
+ * Template Name: Page template
  * The template for displaying single posts and pages.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
